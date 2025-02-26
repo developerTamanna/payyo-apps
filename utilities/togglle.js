@@ -1,4 +1,5 @@
 document.getElementById('cash-out').style.display = 'none'
+document.getElementById('transaction-hiostory').style.display = 'none'
   
 document.getElementById('add-money-box').addEventListener('click', function(){
     handleToggle('add-mony', 'block')

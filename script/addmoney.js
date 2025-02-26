@@ -10,6 +10,10 @@ document.getElementById('add-mony-1').addEventListener('click', function(event){
    const mainBalance = getInnerTextByID("main-balance-add")
     console.log(mainBalance);
 
+
+    const selectedBank = document.getElementById('all-bank').value;
+    console.log(selectedBank)
+
      if(amount <=0){
         alert('please type positive number')
         return;
@@ -25,13 +29,20 @@ document.getElementById('add-mony-1').addEventListener('click', function(event){
     setInnerTextByIDandValue("main-balance-add", sum)
 
         const container = document.getElementById('transaction-container')
-        const p = document.createElement('p');
-        p.innerText = `
-        added ${amount} from ${accountNumber} account
-        `
-        //   console.log(p)
-        container.appendChild(p)
+        // const p = document.createElement('p');
+        // p.innerText = `
+        // added ${amount} from ${accountNumber} account
+        // `
+        // //   console.log(p)
+        // container.appendChild(p)
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <h1>ADDed Money from ${selectedBank}</h1>
+        <h3>${amount} </h3>
+        <p>account number: ${accountNumber}</p>
 
+        `
+        container.appendChild(div);
 
     }
     else{
