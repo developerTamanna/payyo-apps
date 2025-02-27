@@ -14,6 +14,12 @@ function getInnerTextByID(id){
     return convertedValue;
 }
 
+// function getInputValueByIDint(id){
+//     const value = document.getElementById(id).value;
+//     const convertValue = parseInt(value); 
+//     return convertValue;
+// }
+
 
 function setInnerTextByIDandValue(id, value){
     // console.log(id, value);
